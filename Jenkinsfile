@@ -10,8 +10,8 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'gem install bundler'
-                sh 'bundle install'
+                sh '/opt/elasticbeanstalk/.rbenv/shims/gem install bundler'
+                sh '/opt/elasticbeanstalk/.rbenv/shims/bundle install'
             }
         }
         
