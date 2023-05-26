@@ -23,10 +23,10 @@ pipeline {
 
         stage('Deploy to AWS Beanstalk') {
             environment {
-                APPLICATION_NAME = 'rubdi'
-                ENVIRONMENT_NAME = 'rundi-env-1'
+                APPLICATION_NAME = 'ruby'
+                ENVIRONMENT_NAME = 'ruby-env-1'
                 VERSION_LABEL = "${env.BUILD_NUMBER}"
-                BUCKET_NAME = 'elasticbeanstalk-us-east-1-176295807911'
+                BUCKET_NAME = 'elasticbeanstalk-us-east-1-17....'
                 BUCKET_KEY = 'app.zip'
             }
             
