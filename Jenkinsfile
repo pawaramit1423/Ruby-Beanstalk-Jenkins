@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/KunalTi/ReactJS-Beanstalk-Jenkins.git'
+                git branch: 'main', url: 'https://github.com/pawaramit1423/Ruby-Beanstalk-Jenkins.git'
             }
         }
 
@@ -24,7 +24,7 @@ pipeline {
         stage('Deploy to AWS Beanstalk') {
             environment {
                 APPLICATION_NAME = 'ruby'
-                ENVIRONMENT_NAME = 'ruby-env-1'
+                ENVIRONMENT_NAME = 'Ruby-env'
                 VERSION_LABEL = "${env.BUILD_NUMBER}"
                 BUCKET_NAME = 'elasticbeanstalk-us-east-1-17....'
                 BUCKET_KEY = 'app.zip'
